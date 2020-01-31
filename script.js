@@ -42,14 +42,14 @@ function generateRandomNumber(){
  + "," 
  + getRandomColor() +")";
 css.textContent = body.style.background;
-color11 = getRandomColor();
-color22 = getRandomColor();
-color1.value = color11;
-color2.value = color22;
+color1.value = getRandomColor();
+color2.value = getRandomColor();
+// color1.value = color1;
+// color2.value = color22;
 body.style.background = "linear-gradient(to right, " 
-+ color11
++ color1.value
 + ", " 
-+ color22 + ")";
++ color2.value + ")";
 }
 
 
