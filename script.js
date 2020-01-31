@@ -16,7 +16,7 @@ function setGradient(){
    css.textContent = "linear-gradient(to right, red , yellow)";
  
  }
- //it changse the background color
+ //it change the background color
  function setBackground(){
      body.style.background = "linear-gradient(to right, " 
      + color1.value 
@@ -24,16 +24,16 @@ function setGradient(){
      + color2.value + ")";
  }
 
-//it generates a random backgroud color
-function getRandomColor() 
-{
-    var color = "";
-    for(var i = 0; i < 3; i++) {
-        var sub = Math.floor(Math.random() * 256).toString(16);
-        color += (sub.length == 1 ? "0" + sub : sub);
+//it generates a random color
+function getRandomColor() {
+    var letters = '0123456789ABCDEF';
+    var color = '#';
+    for (var i = 0; i < 6; i++) {
+      color += letters[Math.floor(Math.random() * 16)];
     }
-    return "#" + color;
-}
+    return color;
+  }
+
 
 //because of the linear-gradient, it changes the backgroud colour of the two inputs randomly 
 function generateRandomNumber(){
@@ -42,8 +42,15 @@ function generateRandomNumber(){
  + "," 
  + getRandomColor() +")";
 css.textContent = body.style.background;
+color11 = getRandomColor();
+color22 = getRandomColor();
+color1.value = color11;
+color2.value = color22;
+body.style.background = "linear-gradient(to right, " 
++ color11
++ ", " 
++ color22 + ")";
 }
-
 
 
 
