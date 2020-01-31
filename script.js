@@ -42,10 +42,9 @@ function generateRandomNumber(){
  + "," 
  + getRandomColor() +")";
 css.textContent = body.style.background;
+
 color1.value = getRandomColor();
 color2.value = getRandomColor();
-// color1.value = color1;
-// color2.value = color22;
 body.style.background = "linear-gradient(to right, " 
 + color1.value
 + ", " 
